@@ -6,7 +6,7 @@ Este proyecto se trata de un gremio de aventureros al estilo de Dungeons & Drago
 ## Uso de la Aplicación
                  
 - [Manejo de la aplicación](#manejo-de-la-aplicación) 
-- [Modelado (UML)](https://github.com/lucasgomez13/entregable_programacion1/ModeladoUML)
+- [Modelado (UML)](https://github.com/lucasgomez13/entregable_programacion1/raw/master/ModeladoUML.png)
 - [Características y Funcionalidades](#características-y-funcionalidades)
 - [Instalación](#instalación)
 
