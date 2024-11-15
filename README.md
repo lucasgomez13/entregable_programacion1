@@ -14,7 +14,67 @@ Este proyecto se trata de un gremio de aventureros al estilo de Dungeons & Drago
 ### Manejo de la Aplicación
 
 El manejo de la aplicación permite realizar diversas acciones para gestionar los aventureros y misiones del gremio. Las principales funcionalidades incluyen la creación de aventureros, registro de misiones y asignación de estas a los aventureros.
+### Detalle modelado UML
 
+**Gremio**
+  La creamos para representar la asociación con las otras clases. Dentro de ella creamos todos los metodos y el main
+
+**Misión**
+  Esta clase representa una misión que pueden realizar los aventureros del gremio.
+  Atributos:
+    -nombre: El nombre de la misión (tipo str).
+    -rango: El nivel o rango de dificultad de la misión (tipo int).
+    -recompensa: La recompensa monetaria por completar la misión (tipo double).
+    -completado: Un booleano que indica si la misión ha sido completada (tipo bool).
+    -tipo_de_mision: El tipo de misión (tipo str).
+    -cantidad_minima_miembros: El número mínimo de aventureros que pueden participar en la misión (tipo int).
+
+
+**Aventurero**(abstracta)
+  Es una clase abstracta que representa a un aventurero genérico, de la cual heredan clases más específicas como Guerrero, Mago, y Ranger.
+  -Atributos:
+    -nombre: El nombre del aventurero (tipo str).
+    -id: Un identificador único para el aventurero (tipo int).
+    -puntos_habilidad: Los puntos de habilidad del aventurero (tipo int).
+    -experiencia: Los puntos de experiencia del aventurero (tipo int).
+    -dinero: La cantidad de dinero que posee el aventurero (tipo double).
+
+**Clases hijas de Aventurero:**
+
+  **Guerrero**
+
+  Representa un tipo específico de aventurero, enfocado en la fuerza.
+  -Atributo:
+    -fuerza: Representa la fuerza del guerrero (tipo int).
+
+**Mago**
+
+  Representa otro tipo de aventurero, enfocado en el uso de magia.
+  -Atributo:
+    -mana: Representa los puntos de maná del mago, necesarios para realizar hechizos (tipo int).
+
+**Ranger**
+
+  Otro tipo de aventurero, quizás especializado en el uso de habilidades especiales o destrezas.
+  -Atributos:
+      -nombre: Parece ser redundante, ya que Aventurero ya tiene un atributo nombre.
+      -puntosDeHabilidad: Este podría ser un atributo específico que indica puntos de habilidad en habilidades específicas de rango.
+
+  **Asociación:**
+  mascota: Una relación de composición con la clase Mascota, indicando que el Ranger puede tener una mascota.
+
+**Clases Asociadas:**
+
+**Mascota**
+  Representa una mascota que puede pertenecer a un Ranger.
+  -Atributos:
+    -nombre: El nombre de la mascota (tipo str).
+    -puntos_habilidad: Los puntos de habilidad de la mascota (tipo int).
+    -Relaciones
+    -Asociación entre Gremio y Misión / Aventurero: Indica que el gremio está relacionado con misiones y aventureros, aunque el tipo de relación no está completamente especificado (si es una relación uno a muchos, por ejemplo).
+    -Herencia: Guerrero, Mago, y Ranger extienden de la clase abstracta Aventurero, por lo que heredan sus atributos y pueden tener comportamiento específico.
+    -Composición entre Ranger y Mascota: Un Ranger puede tener una mascota, y esta relación es de composición, lo que indica que la existencia de la mascota depende del Ranger.
+    -Este diagrama parece estar diseñado para un sistema en el que se gestionan misiones y personajes de un gremio, donde cada tipo de aventurero tiene atributos únicos que le dan habilidades especiales para cumplir las misiones.
 
 ### Características y Funcionalidades
 
