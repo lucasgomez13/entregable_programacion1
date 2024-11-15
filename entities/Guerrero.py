@@ -1,4 +1,4 @@
-from Aventurero import Aventurero
+from .Aventurero import Aventurero
 
 class Guerrero(Aventurero):
     def __init__(self, nombre, id, puntos_habilidad, experiencia, dinero, fuerza):

@@ -1,9 +1,9 @@
 
-from Mago import Mago
-from Ranger import Ranger
-from Mascota import Mascota
-from Mision import Mision
-from Guerrero import Guerrero
+from .Mago import Mago
+from .Ranger import Ranger
+from .Mascota import Mascota
+from .Mision import Mision
+from .Guerrero import Guerrero
 
 class Gremio:
     def __init__(self):
@@ -278,7 +278,3 @@ class Gremio:
                 break
             else:
                 print("Opción inválida, intente de nuevo.")
-if __name__=="__main__":
-    gremio = Gremio()
-    gremio.menu_principal()
-  

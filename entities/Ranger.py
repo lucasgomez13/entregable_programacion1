@@ -1,5 +1,5 @@
-from Aventurero import Aventurero
-from Mascota import Mascota
+from .Aventurero import Aventurero
+from .Mascota import Mascota
 
 class Ranger(Aventurero):
     def __init__(self, nombre, id, puntos_habilidad, experiencia, dinero, mascota=None):
